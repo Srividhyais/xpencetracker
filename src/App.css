@@ -225,7 +225,7 @@
   }
 
   .App {
-    overflow-x: hidden;
+    overflow-y: auto;
   }
 }
 
@@ -307,7 +307,7 @@
 
 @media (max-width:767px) {
   .App {
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   .expenseTracker {
@@ -360,13 +360,6 @@
     left: -0.2rem;
   }
 
-
-  .topExpenseHeader {
-    font-size: 1.5rem;
-    color: white;
-    font-weight: 700;
-    margin: 1rem 2rem;
-  }
 
   .topExpenseHeader {
     font-size: 1.5rem;
