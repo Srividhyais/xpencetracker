@@ -298,6 +298,7 @@ export default function Trackers() {
                                 />
 
                                 <input
+                                    name='price'
                                     type='number'
                                     value={expense.price}
                                     onChange={(e) => setExpense({ ...expense, price: e.target.value })}
