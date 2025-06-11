@@ -16,7 +16,7 @@ export default function Trackers() {
         expenses: savedExpenses !== null ? Number(savedExpenses) : 0
     };
     });
-
+    
     const [balanceModal, setBalanceModal] = useState(false);
     const [addBalance, setAddBalance] = useState('');
     const [expenseModal, setExpenseModal] = useState(false);
@@ -29,6 +29,10 @@ export default function Trackers() {
         const storedChartList = localStorage.getItem('chartList');
         return storedChartList ? JSON.parse(storedChartList) : [];
     });
+
+     useEffect(() => {
+        document.body.classList.toggle("modal-open", balanceModal || expenseModal);
+    }, [balanceModal, expenseModal]);
 
     const [editIndex, setEditIndex] = useState(null)
     useEffect(() => {
@@ -170,7 +174,8 @@ export default function Trackers() {
                 <div className='tracker'>
                     <div style={{ display: "flex", flexDirection: "column" }}>
                         <span style={{ color: 'white' }}><h2>Wallet Balance :  <span style={{ color: "#89E148" }}>₹ {amount.balance}</span></h2></span>
-                        <button type = "submit" style={{
+                        <button type = "submit" disabled={balanceModal || expenseModal}
+                        style={{
                             backgroundColor: "rgb(137, 225, 72)",
                             width: "8rem",
                             height: "2rem",
@@ -212,6 +217,7 @@ export default function Trackers() {
                         <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem' }}>
                             <input className="balanceInput" type='number' value={addBalance} onChange={(e) => setAddBalance(e.target.value)} placeholder='Income Amount' />
                             <button type="submit"
+                            disabled={balanceModal || expenseModal}
                                 onClick={handleAddBalance}
                                 style={{
                                     padding: '10px 20px',

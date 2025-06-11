@@ -136,6 +136,17 @@
   gap: "4rem"
 }
 
+.modal-open .expenseTracker,
+.modal-open .transactionsTab {
+  pointer-events: none;
+}
+
+.modal-open .ReactModal__Overlay,
+.modal-open .ReactModal__Content {
+  pointer-events: auto;
+  z-index: 1000;
+}
+
 @media (min-width:1025px) {
   .expenseTracker {
     background-color: #626262;
