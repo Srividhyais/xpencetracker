@@ -209,7 +209,7 @@ export default function Tracker() {
                         <h3 style={{ marginBottom: '20px' }}>Add Balance</h3>
                         {/* <p style={{ marginBottom: '20px' }}>Add Balance</p> */}
                         <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem' }}>
-                            <input className="balanceInput" type='text' value={addBalance} onChange={(e) => setAddBalance(e.target.value)} placeholder='Income Amount' />
+                            <input className="balanceInput" type='number' value={addBalance} onChange={(e) => setAddBalance(e.target.value)} placeholder='Income Amount' />
                             <button type='submit'
                                 onClick={handleAddBalance}
                                 style={{
@@ -225,6 +225,7 @@ export default function Tracker() {
                                 Add Balance
                             </button>
                             <button
+                            type='submit'
                                 onClick={() => setBalanceModal(false)}
                                 style={{
                                     padding: '10px 20px',
@@ -293,6 +294,7 @@ export default function Tracker() {
                                 <input
 
                                     type='text'
+                                    name='title'}
                                     value={expense.title}
                                     onChange={(e) => setExpense({ ...expense, title: e.target.value })}
                                     placeholder='Expense Title'
@@ -300,12 +302,14 @@ export default function Tracker() {
 
                                 <input
                                     type='number'
+                                    name='price'
                                     value={expense.price}
                                     onChange={(e) => setExpense({ ...expense, price: e.target.value })}
                                     placeholder='Amount'
                                 />
 
                                 <select
+                                    name='category'
                                     value={expense.category}
                                     onChange={(e) => setExpense({ ...expense, category: e.target.value })}
                                     style={{ border: "none", borderRadius: '0.7rem' }}
@@ -320,10 +324,12 @@ export default function Tracker() {
 
                                 <input
                                     type="date"
+                                    name='date'
                                     value={expense.date}
                                     onChange={(e) => setExpense({ ...expense, date: e.target.value })}
                                 />
                                 <button
+                                    type='submit'
                                     onClick={handleExpense}
                                     style={{
                                         padding: '10px 20px',
