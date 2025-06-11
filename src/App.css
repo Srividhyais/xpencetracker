@@ -301,7 +301,7 @@
   }
 
   .App {
-    overflow-x: hidden;
+    overflow-x: auto;
   }
 }
 
