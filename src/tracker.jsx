@@ -183,6 +183,7 @@ export default function Tracker() {
                         isOpen={balanceModal} // This tells ReactModal whether it should be visible or not.So if balanceModal is true, the modal opens; if false, it stays hidden.
                         onRequestClose={() => setBalanceModal(false)} //This defines what happens when the user tries to close the modal.Here, it sets balanceModal to false, i.e., closes the modal.
                         shouldCloseOnOverlayClick={true}
+                        ariaHideApp={false}
                         style={{
                             content: {
                                 top: '50%',
@@ -264,6 +265,7 @@ export default function Tracker() {
                         isOpen={expenseModal} // This tells ReactModal whether it should be visible or not.So if balanceModal is true, the modal opens; if false, it stays hidden.
                         onRequestClose={() => setExpenseModal(false)} //This defines what happens when the user tries to close the modal.Here, it sets balanceModal to false, i.e., closes the modal.
                         shouldCloseOnOverlayClick={true}
+                        ariaHideApp={false}
                         style={{
                             content: {
                                 top: '50%',
