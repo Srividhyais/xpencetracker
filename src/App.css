@@ -3,7 +3,7 @@
   background-color: #3B3B3B;
   width: 100vw;
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .ReactModal__Content {
   z-index: 9999 !important;
@@ -231,7 +231,7 @@
   }
 
   .App {
-    overflow-x: hidden;
+    overflow-x: auto;
   }
 }
 
@@ -242,15 +242,12 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* 👈 allows elements to drop down if no space */
     gap: 2rem;
-    /* 👈 much smaller than 12rem */
     align-items: center;
     justify-content: center;
     margin: 1rem auto;
     border-radius: 1rem;
     height: auto;
-    /* 👈 allow dynamic height */
   }
 
   .borderMap {
@@ -258,7 +255,6 @@
     position: relative;
     top: 0rem;
     width: 100%;
-    /* 👈 better for responsiveness */
     left: 0;
   }
 
@@ -311,13 +307,13 @@
   }
 
   .App {
-    overflow-x: hidden;
+    overflow-x: auto;
   }
 }
 
 @media (max-width:767px) {
   .App {
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   .expenseTracker {
@@ -369,14 +365,6 @@
     width: 39rem;
     left: -0.2rem;
   }
-
-  /* .topExpenses {
-    background: white;
-    height: auto;
-    margin: 0rem 2rem;
-    padding: 1rem;
-    border-radius: 1rem;
-  } */
 
   .topExpenseHeader {
     font-size: 1.5rem;

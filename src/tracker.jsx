@@ -28,12 +28,7 @@ export default function Tracker() {
         localStorage.setItem('balance', amount.balance);
         localStorage.setItem('expenses', amount.expenses);
     }, [amount]);
-    // const [chartsData, setChartsData] = useState(()=>{
-    //     const charts = localStorage.getItem('chartsData');
-    //     return charts ? JSON.parse(charts) : [];
-    // });
-
-
+    
     function handleAddBalance() {
         setAmount({ ...amount, balance: amount.balance + Number(addBalance) });
         setBalanceModal(false);
@@ -290,11 +285,9 @@ export default function Tracker() {
                         }}
                     >
                         <h3 style={{ marginBottom: '20px' }}>Add expenses</h3>
-                        {/* <p style={{ marginBottom: '20px' }}>Add Balance</p> */}
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                             <div className='expenseInnerDiv'>
                                 <input
-
                                     type='text'
                                     name='title'
                                     value={expense.title}
