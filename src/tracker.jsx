@@ -286,7 +286,6 @@ export default function Trackers() {
                         }}
                     >
                         <h3 style={{ marginBottom: '20px' }}>Add expenses</h3>
-                        {/* <p style={{ marginBottom: '20px' }}>Add Balance</p> */}
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                             <div className='expenseInnerDiv'>
                                 <input
