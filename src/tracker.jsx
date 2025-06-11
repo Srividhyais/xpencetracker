@@ -161,10 +161,10 @@ export default function Trackers() {
     return (
         <div> 
              <div>
-                <h2 style={{
+                <h1 style={{
                 color: "white", position: "relative",
                 left: "2rem"
-            }}>Expense Tracker</h2>
+            }}>Expense Tracker</h1>
             </div>
             <div className='expenseTracker'>
                 <div className='tracker'>
