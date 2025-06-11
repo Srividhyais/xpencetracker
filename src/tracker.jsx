@@ -170,7 +170,7 @@ export default function Trackers() {
                 <div className='tracker'>
                     <div style={{ display: "flex", flexDirection: "column" }}>
                         <span style={{ color: 'white' }}><h2>Wallet Balance :  <span style={{ color: "#89E148" }}>₹ {amount.balance}</span></h2></span>
-                        <button style={{
+                        <button type = "submit" style={{
                             backgroundColor: "rgb(137, 225, 72)",
                             width: "8rem",
                             height: "2rem",
@@ -245,7 +245,7 @@ export default function Trackers() {
                 <div className='tracker'>
                     <div style={{ display: "flex", flexDirection: "column" }}>
                         <span style={{ color: 'white' }}><h2>Expense :  <span style={{ color: "#F4BB4A" }}>₹ {amount.expenses}</span></h2></span>
-                        <button style={{
+                        <button type = "submit" style={{
                             backgroundImage: "linear-gradient(90deg, #FF9595 10%, #FF4747 35%, #FF3838 100%)",
                             width: "8rem",
                             height: "2rem",
@@ -306,6 +306,7 @@ export default function Trackers() {
                                 />
 
                                 <select
+                                    name='category'
                                     value={expense.category}
                                     onChange={(e) => setExpense({ ...expense, category: e.target.value })}
                                     style={{ border: "none", borderRadius: '0.7rem' }}
