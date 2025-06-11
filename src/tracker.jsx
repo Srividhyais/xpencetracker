@@ -294,7 +294,7 @@ export default function Tracker() {
                                 <input
 
                                     type='text'
-                                    name='title'}
+                                    name='title'
                                     value={expense.title}
                                     onChange={(e) => setExpense({ ...expense, title: e.target.value })}
                                     placeholder='Expense Title'
