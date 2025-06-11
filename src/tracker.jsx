@@ -210,7 +210,7 @@ export default function Trackers() {
                     >
                         <h3 style={{ marginBottom: '20px' }}>Add Balance</h3>
                         <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem' }}>
-                            <input className="balanceInput" type='text' value={addBalance} onChange={(e) => setAddBalance(e.target.value)} placeholder='Income Amount' />
+                            <input className="balanceInput" type='number' value={addBalance} onChange={(e) => setAddBalance(e.target.value)} placeholder='Income Amount' />
                             <button
                                 onClick={handleAddBalance}
                                 style={{
@@ -290,7 +290,7 @@ export default function Trackers() {
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                             <div className='expenseInnerDiv'>
                                 <input
-
+                                    name='title'
                                     type='text'
                                     value={expense.title}
                                     onChange={(e) => setExpense({ ...expense, title: e.target.value })}
