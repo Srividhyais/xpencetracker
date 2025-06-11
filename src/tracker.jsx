@@ -158,15 +158,16 @@ export default function Tracker() {
     console.log("Expenses :", expenseList)
     return (
         <>
-            <div><h2 style={{
+            <div><h1 style={{
                 color: "white", position: "relative",
                 left: "2rem"
-            }}>Expense Tracker</h2></div>
+            }}>Expense Tracker</h1></div>
             <div className='expenseTracker'>
                 <div className='tracker'>
                     <div style={{ display: "flex", flexDirection: "column" }}>
                         <span style={{ color: 'white' }}><h2>Wallet Balance :  <span style={{ color: "#89E148" }}>₹ {amount.balance}</span></h2></span>
-                        <button style={{
+                        <button type='submit'
+                        style={{
                             backgroundColor: "rgb(137, 225, 72)",
                             width: "8rem",
                             height: "2rem",
@@ -209,7 +210,7 @@ export default function Tracker() {
                         {/* <p style={{ marginBottom: '20px' }}>Add Balance</p> */}
                         <div style={{ display: 'flex', flexDirection: 'row', gap: '1rem' }}>
                             <input className="balanceInput" type='text' value={addBalance} onChange={(e) => setAddBalance(e.target.value)} placeholder='Income Amount' />
-                            <button
+                            <button type='submit'
                                 onClick={handleAddBalance}
                                 style={{
                                     padding: '10px 20px',
@@ -243,7 +244,8 @@ export default function Tracker() {
                 <div className='tracker'>
                     <div style={{ display: "flex", flexDirection: "column" }}>
                         <span style={{ color: 'white' }}><h2>Expense :  <span style={{ color: "#F4BB4A" }}>₹ {amount.expenses}</span></h2></span>
-                        <button style={{
+                        <button type='submit'
+                        style={{
                             // backgroundolor: #00DBDE;
                             backgroundImage: "linear-gradient(90deg, #FF9595 10%, #FF4747 35%, #FF3838 100%)",
                             width: "8rem",
