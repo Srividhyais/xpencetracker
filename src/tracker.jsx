@@ -46,8 +46,6 @@ export default function Tracker() {
             return;
         }
 
-
-
         if (editIndex !== null) {
             const prevPrice = Number(expenseList[editIndex].price);
             const updatedList = [...expenseList];
@@ -143,13 +141,6 @@ export default function Tracker() {
         localStorage.setItem('chartList', JSON.stringify(chartList));
     }, [chartList]);
 
-    // useEffect(() => {
-    //     const storedExpenses = localStorage.getItem('expenseList');
-    //     if (storedExpenses) {
-    //         setExpenseList(JSON.parse(storedExpenses));
-    //     }
-    // }, [expenseList]);
-    console.log("Expenses :", expenseList)
     return (
         <>
             <div><h1 style={{
@@ -159,7 +150,7 @@ export default function Tracker() {
             <div className='expenseTracker'>
                 <div className='tracker'>
                     <div style={{ display: "flex", flexDirection: "column" }}>
-                        <span style={{ color: 'white' }}><h2>Wallet Balance : <span style={{ color: "#89E148" }}>₹ {amount.balance}</span></h2></span>
+                        <h2><span>Wallet Balance</span> : <span style={{ color: "#89E148" }}>₹ {amount.balance}</span></h2>
                         <button type='submit'
                         style={{
                             backgroundColor: "rgb(137, 225, 72)",
@@ -186,7 +177,6 @@ export default function Tracker() {
                                 bottom: 'auto',
                                 marginRight: '-50%',
                                 transform: 'translate(-50%, -50%)',
-                                // backgroundImage: "linear-gradient(90deg, #FF9595 10%, #FF4747 35%, #FF3838 100%)",
                                 backgroundColor: '#EFEFEFD9',
                                 color: 'black',
                                 padding: '30px',
@@ -321,6 +311,7 @@ export default function Tracker() {
                                     name='date'
                                     value={expense.date}
                                     onChange={(e) => setExpense({ ...expense, date: e.target.value })}
+                                    placeholder="yyyy-mm-dd" 
                                 />
                                 <button
                                     type='submit'
@@ -374,7 +365,7 @@ export default function Tracker() {
                         width: 'fit-content',
                         position: 'relative',
                         left: '0rem', color: "white"
-                    }}>Recent Transactions</h2>
+                    }}>Transactions</h2>
                     <div className='transaction'>
                         {
                             expenseList.length === 0 ? (
