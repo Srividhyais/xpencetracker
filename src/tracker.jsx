@@ -41,7 +41,7 @@ export default function Tracker() {
             return;
         }
 
-        if (!expense.title || !expense.category || !expense.date) {
+        if (!expense.title.trim() || !expense.category || !expense.date || isNaN(price) || price <= 0) {
             alert("Please fill in all fields.");
             return;
         }
@@ -94,7 +94,6 @@ export default function Tracker() {
 
 
     function handleDelete(indexToRemove) {
-        console.log("here it is", indexToRemove)
         const updatedList = expenseList.filter((_, index) => index !== indexToRemove);
         setExpenseList(updatedList);
         const removedExpense = expenseList[indexToRemove];
