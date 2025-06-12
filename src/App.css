@@ -329,14 +329,15 @@
     border-radius: 1rem;
     height: auto;
   }
-
+  /**
   .recharts-wrapper {
     position: relative;
     cursor: default;
     width: 91%;
     /* height: auto; */
-    top: -3rem;
-  }
+    /*top: -3rem; */
+  /**}
+  **/
 
   .transactionsTab {
     display: flex;
@@ -396,6 +397,7 @@
     margin: auto;
   }
 
+  /**
   .recharts-wrapper-horizontal {
     position: relative;
     top: 1rem;
@@ -405,4 +407,5 @@
     max-height: 209px;
     max-width: 627px;
   }
+    **/ 
 }
