@@ -26,8 +26,8 @@ export default function Tracker() {
     console.log(setAmount)
     useEffect(() => {
         localStorage.setItem('balance', amount.balance);
-        localStorage.setItem('expenses', amount.expenses);
-    }, [amount]);
+        localStorage.setItem('expenses', JSON.stringify(expenseList));
+    }, [amount,expenseList]);
     
     function handleAddBalance() {
         setAmount({ ...amount, balance: amount.balance + Number(addBalance) });
