@@ -167,7 +167,12 @@ export default function Tracker() {
                     <ReactModal
                         isOpen={balanceModal} // This tells ReactModal whether it should be visible or not.So if balanceModal is true, the modal opens; if false, it stays hidden.
                         onRequestClose={() => setBalanceModal(false)} //This defines what happens when the user tries to close the modal.Here, it sets balanceModal to false, i.e., closes the modal.
-                        shouldCloseOnOverlayClick={true}
+                        
+                        onAfterClose={() => {
+                        // Ensure modal and overlay are truly removed
+                        document.body.style.overflow = 'unset';
+                    }}
+                    shouldCloseOnOverlayClick={true}
                         ariaHideApp={false}
                         style={{
                             content: {
@@ -188,6 +193,7 @@ export default function Tracker() {
                             },
                             overlay: {
                                 backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                                zIndex: 999,
                             }
                         }}
                     >
@@ -248,6 +254,10 @@ export default function Tracker() {
                     <ReactModal
                         isOpen={expenseModal} // This tells ReactModal whether it should be visible or not.So if balanceModal is true, the modal opens; if false, it stays hidden.
                         onRequestClose={() => setExpenseModal(false)} //This defines what happens when the user tries to close the modal.Here, it sets balanceModal to false, i.e., closes the modal.
+                        onAfterClose={() => {
+                        // Ensure modal and overlay are truly removed
+                        document.body.style.overflow = 'unset';
+                        }}
                         shouldCloseOnOverlayClick={true}
                         ariaHideApp={false}
                         style={{
@@ -270,6 +280,7 @@ export default function Tracker() {
                             },
                             overlay: {
                                 backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                                zIndex: 999,
                             }
                         }}
                     >
