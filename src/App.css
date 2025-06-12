@@ -132,7 +132,7 @@
   width: 1rem;
 }
 
-.transaction {
+.transactions {
   background: "white";
   display: "flex";
   flex-direction: "column";
