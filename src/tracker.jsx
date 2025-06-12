@@ -8,7 +8,7 @@ import { faPen, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 export default function Tracker() {
 
-    const [amount, setAmount] = useState({ balance: localStorage.getItem('balance') ? Number(localStorage.getItem('balance')) : 5000, expenses: localStorage.getItem('expenses') ? Number(localStorage.getItem('expenses')) : 0 });
+    const [amount, setAmount] = useState({ balance: localStorage.getItem('balance') ? Number(localStorage.getItem('balance')) : 0, expenses: localStorage.getItem('expenses') ? Number(localStorage.getItem('expenses')) : 0 });
     const [balanceModal, setBalanceModal] = useState(false);
     const [addBalance, setAddBalance] = useState('');
     const [expenseModal, setExpenseModal] = useState(false);
@@ -160,7 +160,7 @@ export default function Tracker() {
             <div className='expenseTracker'>
                 <div className='tracker'>
                     <div style={{ display: "flex", flexDirection: "column" }}>
-                        <span style={{ color: 'white' }}><h2>Wallet Balance :  <span style={{ color: "#89E148" }}>₹ {amount.balance}</span></h2></span>
+                        <span style={{ color: 'white' }}><h2>Wallet Balance : <span style={{ color: "#89E148" }}>₹ {amount.balance}</span></h2></span>
                         <button type='submit'
                         style={{
                             backgroundColor: "rgb(137, 225, 72)",
