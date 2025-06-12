@@ -5,9 +5,11 @@
   height: 100vh;
   overflow-y: auto;
 }
+/**
 .ReactModal__Content {
   z-index: 9999 !important;
 }
+  **/
 /**
 .recharts-wrapper {
   z-index: 1; /* Make sure it's lower than modal */
