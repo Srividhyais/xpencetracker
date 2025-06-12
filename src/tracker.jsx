@@ -336,7 +336,7 @@ export default function Tracker() {
                                         border: 'none',
                                     }}
                                 >
-                                    Add expenses
+                                    Add expense
                                 </button>
                                 <button
                                     onClick={() => setExpenseModal(false)}
