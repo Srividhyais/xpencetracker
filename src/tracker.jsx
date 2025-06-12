@@ -368,7 +368,7 @@ export default function Tracker() {
             </div>
 
 
-            <div className='transactions'>
+            <div className='transactionsTab'>
 
                 <div className='transactionTabDiv1'>
                     <h2 className='transactionHeader' style={{
@@ -376,7 +376,7 @@ export default function Tracker() {
                         position: 'relative',
                         left: '0rem', color: "white"
                     }}>Recent Transactions</h2>
-                    <div>
+                    <div className='transaction'>
                         {
                             expenseList.length === 0 ? (
                                 <div style={{ backgroundColor: "white", padding: "1rem" }}>

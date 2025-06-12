@@ -131,16 +131,16 @@
   border-radius: 0.8rem;
   width: 1rem;
 }
-/**
-.transactions {
+
+.transaction {
   background: "white";
   display: "flex";
   flex-direction: "column";
   gap: "1rem"
 }
-  **/
 
-.transactions {
+
+.transactionsTab {
   display: "flex";
   flex-direction: "column";
   margin: "0rem 2rem";
@@ -177,16 +177,15 @@
     justify-content: center;
     align-items: center;
   }
-/**
-  .transactions {
+
+  .transaction {
     display: flex;
     gap: 4rem;
     margin: 0rem 2rem;
     position: relative;
   }
-    **/
 
-  .transactions {
+  .transactionsTab {
     background: white;
     display: flex;
     flex-direction: column;
@@ -264,7 +263,7 @@
     left: 0;
   }
 
-  .transactions {
+  .transactionsTab {
     display: flex;
     flex-direction: column;
     gap: 4rem;
@@ -344,7 +343,7 @@
   /**}
   **/
 
-  .transactions{
+  .transactionsTab{
     display: flex;
     flex-direction: column;
     gap: 2rem;
