@@ -240,7 +240,7 @@ export default function Tracker() {
                 </div>
                 <div className='tracker'>
                     <div style={{ display: "flex", flexDirection: "column" }}>
-                        <span style={{ color: 'white' }}><h2>Expense :  <span style={{ color: "#F4BB4A" }}>₹ {amount.expenses}</span></h2></span>
+                        <span style={{ color: 'white' }}><h2>Expenses :  <span style={{ color: "#F4BB4A" }}>₹ {amount.expenses}</span></h2></span>
                         <button type='submit'
                         style={{
                             // backgroundolor: #00DBDE;
