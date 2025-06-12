@@ -47,6 +47,7 @@
   outline: none;
 }
 
+/**
 .recharts-default-legend {
   display: flex;
 }
@@ -72,7 +73,7 @@
   width: 400px;
   height: 400px;
 }
-
+**/
 .expenseInnerDiv {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
