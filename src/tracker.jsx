@@ -284,7 +284,7 @@ export default function Tracker() {
                             }
                         }}
                     >
-                        <h3 style={{ marginBottom: '20px' }}>Add expenses</h3>
+                        <h3 style={{ marginBottom: '20px' }}>Add Expenses</h3>
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                             <div className='expenseInnerDiv'>
                                 <input
@@ -336,7 +336,7 @@ export default function Tracker() {
                                         border: 'none',
                                     }}
                                 >
-                                    Add expense
+                                    Add Expense
                                 </button>
                                 <button
                                     onClick={() => setExpenseModal(false)}
