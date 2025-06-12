@@ -375,7 +375,7 @@ export default function Tracker() {
                         width: 'fit-content',
                         position: 'relative',
                         left: '0rem', color: "white"
-                    }}>Transactions</h2>
+                    }}>Recent Transactions</h2>
                     <div className='transactions'>
                         {
                             expenseList.length === 0 ? (
