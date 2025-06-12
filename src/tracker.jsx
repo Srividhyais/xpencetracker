@@ -379,9 +379,10 @@ export default function Tracker() {
                     <div className='transaction'>
                         {
                             expenseList.length === 0 ? (
-                                <div style={{ backgroundColor: "white", padding: "1rem" }}>
-                                    <div>No Transactions</div>
+                                <div className="no-transactions" style={{ backgroundColor: "white", padding: "1rem" }}>
+                                    No Transactions
                                 </div>
+
                             ) : (
                                 expenseList.map((item, index) => (
                                     <>
